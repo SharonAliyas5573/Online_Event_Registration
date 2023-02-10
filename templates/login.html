@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+    <style>
+      label {
+  font-family: "Raleway", sans-serif;
+  font-size: 11pt;
+}
+#forgot-pass {
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 3px;
+  text-align: right;
+}
+#card {
+  background: #fbfbfb;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 410px;
+  margin: 6rem auto 8.1rem auto;
+  width: 329px;
+}
+#card-content {
+  padding: 12px 44px;
+}
+#card-title {
+  
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
+}
+#signup {
+  
+  
+  font-size: 10pt;
+  margin-top: 16px;
+  text-align: center;
+}
+#submit-btn {
+  background: -webkit-linear-gradient(right, #281027, #3d3685);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #593888;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #7a2f85;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  background: -webkit-linear-gradient(right, #a22894, #5e2061);
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  background: #d3d3d3;
+  border: none;
+  outline: none;
+  padding-top: 14px;
+}
+.underline-title {
+  background: -webkit-linear-gradient(right, #3e0d2c, #641572);
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 89px;
+}
+    </style>
+  </head>
+  <body>
+    <!--navigation-->
+    <section id="home" class="">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <img style="border-radius: 10px" src="./img/icon.ico" alt="" />&nbsp;
+          <a class="navbar-brand heading-black" href="index.html">
+           -IHRD-
+          </a>
+          <button
+            class="navbar-toggler navbar-toggler-right border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span data-feather="grid"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link page-scroll fs-5" href="/login">-Admin-</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#register">-Register-</a>
+              </li>
+             
+
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#About">-About-</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div id="card">
+      <div id="card-content">
+        <div id="card-title">
+          <h2 style=" color: #513d3d;">LOGIN</h2>
+          <div class="underline-title"></div>
+        </div>
+        <form action="{{ url_for('login') }}" class="form" method="post">
+          <label for="username" style="color: #642b6c;">Username:</label>
+          <input type="text" id="username" class="form-content" name="username" required>
+          <div class="form-border"></div>
+          <br>
+          <label for="password" style="color: #642b6c;">Password:</label>
+          <input type="password" class="form-content" id="password" name="password" required>
+          <br>
+          <div class="form-border"></div>
+          <a href="#">
+            <legend id="forgot-pass" style="color: #642b6c;">Forgot password?</legend>
+          </a>
+          <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+          <a href="#" id="signup">Don't have account yet?</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
