@@ -32,6 +32,6 @@ function startTimer(targetDate) {
     const timer = setInterval(updateTimer, 1000);
   }
   
-  const targetDate = new Date("2023-02-11T05:59:59");
+  const targetDate = new Date("2023-03-11T05:59:59");
   startTimer(targetDate);
   
